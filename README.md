@@ -1,10 +1,11 @@
 # 12
 #include <iostream>
-using namespace std;
-int main()
-{
-    int x, y, n;
-    for (x=1, n=0; n<9; y=(x+1)*2, x=y, n++);
-        cout<<"第一天共摘的桃子数量为 "<<x<<endl;
-    return 0;
+int main() {
+  for (int x = 1, n = 9; n > 0; n--) {
+    std::cout << "第" << n << "天吃之前有" << (x + 1) * 2 << "个桃子"
+              << std::endl;
+    std::cout << "第" << n << "天吃完后有" << x << "个桃子" << std::endl;
+    x = (x + 1) * 2;
+  }
+  return 0;
 }
